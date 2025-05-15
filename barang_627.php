@@ -8,11 +8,11 @@
         <div class="container">
         <h2>Gudang Barang</h2>
         <form action="template_robi.php" method="POST">
-            ID Barang : <input type="text" name="idBarang_3nim"><br>
-            Nama Barang : <input type="text" name="namaBarang_3nim"><br>
-            Deskripsi : <input type="text" name="deskripsiBarang_3nim"><br>
-            Kategori : <input type="text" name="kategoriBarang_3nim"><br>
-            Stock : <input type="text" name="stockBarang_3nim"><br>
+            ID Barang : <input type="text" name="idBarang_627"><br>
+            Nama Barang : <input type="text" name="namaBarang_627"><br>
+            Deskripsi : <input type="text" name="deskripsiBarang_627"><br>
+            Kategori : <input type="text" name="kategoriBarang_627"><br>
+            Stock : <input type="text" name="stockBarang_627"><br>
             <input type="submit" value="Submit">
         </form>
         </div>
@@ -49,11 +49,11 @@
     }
 
     if ($_POST) {
-        $idBarang = $_POST['idBarang_3nim'];
-        $namaBarang = $_POST['namaBarang_3nim'];
-        $deskripsiBarang = $_POST['deskripsiBarang_3nim'];
-        $kategoriBarang = $_POST['kategoriBarang_3nim'];
-        $stockBarang = $_POST['stockBarang_3nim'];
+        $idBarang = $_POST['idBarang_627'];
+        $namaBarang = $_POST['namaBarang_627'];
+        $deskripsiBarang = $_POST['deskripsiBarang_627'];
+        $kategoriBarang = $_POST['kategoriBarang_627'];
+        $stockBarang = $_POST['stockBarang_627'];
         
         $out_3nim = new turunanClass_3nim($idBarang,$namaBarang,$deskripsiBarang,$kategoriBarang, $stockBarang);
         $out_3nim -> funtion_3nim();
