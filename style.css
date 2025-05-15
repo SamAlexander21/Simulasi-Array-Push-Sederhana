@@ -31,7 +31,7 @@ label {
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -40,7 +40,7 @@ input[type="text"] {
 }
 
 input[type="password"] {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -73,6 +73,7 @@ input[type="submit"]:hover {
     border-radius: 8px;
     border-left: 4px solid #d60000;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
 }
 
 .hasil p {
