@@ -13,7 +13,7 @@
             Deskripsi : <input type="text" name="deskripsiBarang_3nim"><br>
             Kategori : <input type="text" name="kategoriBarang_3nim"><br>
             Stock : <input type="text" name="stockBarang_3nim"><br>
-            <input type="submit">
+            <input type="submit" value="Submit">
         </form>
         </div>
     </body>
