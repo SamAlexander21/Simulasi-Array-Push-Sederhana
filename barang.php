@@ -5,6 +5,8 @@
         <title>Gudang Barang</title>
         <link rel="stylesheet" href="style.css">
     <body>
+        <div class="container">
+        <h2>Gudang Barang</h2>
         <form action="template_robi.php" method="POST">
             ID Barang : <input type="text" name="idBarang_3nim"><br>
             Nama Barang : <input type="text" name="namaBarang_3nim"><br>
@@ -13,6 +15,7 @@
             Stock : <input type="text" name="stockBarang_3nim"><br>
             <input type="submit">
         </form>
+        </div>
     </body>
 </html>
 
