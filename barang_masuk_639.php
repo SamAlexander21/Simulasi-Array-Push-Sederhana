@@ -62,9 +62,9 @@
             echo "<p><strong>Jumlah:</strong> {$this->jumlah}</p>";
             echo "<p><strong>Kondisi Barang:</strong> {$this->kondisiBarang}</p>";
             echo "<p><strong>Tanggal Masuk:</strong> {$this->tanggalMasuk}</p>";
-            foreach ($this->array as $key => $value) {
-                echo "<p><strong>Array</strong>[{$key}]: $value";
-            }
+            // foreach ($this->array as $key => $value) {
+            //     echo "<p><strong>Array</strong>[{$key}]: $value";
+            // }
         }
     }
 
