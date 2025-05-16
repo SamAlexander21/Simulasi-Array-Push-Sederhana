@@ -57,11 +57,11 @@
             );
         }
         public function funtion_627() {
-            echo "<p><strong>ID Barang:</strong> {$this->idBarang}</p>";
-            echo "<p><strong>Nama Barang:</strong> {$this->namaBarang}</p>";
-            echo "<p><strong>Deskripsi:</strong> {$this->deskripsiBarang}</p>";
-            echo "<p><strong>Kategori:</strong> {$this->kategoriBarang}</p>";
-            echo "<p><strong>Stock:</strong> {$this->stockBarang}</p>";
+            echo "<p><strong>ID Barang:</strong> {$this->array[0]}</p>";
+            echo "<p><strong>Nama Barang:</strong> {$this->array[1]}</p>";
+            echo "<p><strong>Deskripsi:</strong> {$this->array[2]}</p>";
+            echo "<p><strong>Kategori:</strong> {$this->array[3]}</p>";
+            echo "<p><strong>Stock:</strong> {$this->array[4]}</p>";
         }
     }
 
