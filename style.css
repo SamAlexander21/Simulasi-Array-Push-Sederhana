@@ -30,6 +30,8 @@ body {
 
 .nav-links a:hover {
     color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.03);
+    transition: all 0.3s ease;
 }
 
 .navbar h1 {
@@ -70,15 +72,6 @@ input[type="text"] {
 }
 
 input[type="date"] {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    font-size: 14px;
-}
-
-#metode {
     width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
