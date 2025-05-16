@@ -35,7 +35,7 @@
 </html>
 
 <?php
-    class namaClass_639 {
+    class Barang_masuk_639 {
         protected $namaBarang;
         protected $supplier;
         protected $tanggalMasuk;
@@ -44,7 +44,7 @@
         protected $array;
     }
 
-    class turunanClass_639 extends namaClass_639 {
+    class stock_639 extends Barang_masuk_639 {
         public function __construct($var1_639,$var2_639,$var3_639,$var4_639,$var5_639) {
             $this->namaBarang = $var1_639;
             $this->supplier = $var2_639;
@@ -73,7 +73,7 @@
         $kondisiBarang = $_POST['kondisiBarang_639'];
         
         echo "<div class='hasil'>";
-        $out_639 = new turunanClass_639($namaBarang,$supplier,$tanggalMasuk,$jumlah, $kondisiBarang);
+        $out_639 = new stock_639($namaBarang,$supplier,$tanggalMasuk,$jumlah, $kondisiBarang);
         $out_639 -> funtion_639();
         echo "</div>";
     }

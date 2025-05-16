@@ -78,6 +78,15 @@ input[type="date"] {
     font-size: 14px;
 }
 
+#metode {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
 input[type="password"] {
     width: 95%;
     padding: 10px;

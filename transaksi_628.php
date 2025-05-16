@@ -23,20 +23,26 @@
                 <label for="nama">Nama Pelanggan</label>
                 <input type="text" name="namaPelanggan" id="nama" required>
                 
-                <label for="tanggal">Tanggal</label>
-                <input type="text" name="tanggal" id="tanggal" required>
-                
                 <label for="barang">Barang</label>
                 <input type="text" name="barang" id="barang" required>
                 
-                <label for="bayar">Total Hrga bayar</label>
+                <label for="bayar">Total Harga bayar</label>
                 <input type="text" name="totalBayar" id="bayar" required>
                 
                 <label for="metode">Metode Pembayaran</label>
-                <input type="text" name="metodeBayar" id="metode" required>
+                <!-- <input type="text" name="metodeBayar" id="metode" required> -->
                 
-                <input type="submit" value="Register">
+                <select name="metodeBayar" id="metode" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 20px; font-size: 14px; background: #fff;">
+                    <option value="Tunai">Tunai</option>
+                    <option value="Kredit">Kredit</option>
+                </select>
+
+                <label for="tanggal">Tanggal</label>
+                <input type="date" name="tanggal" id="tanggal" required>
+
+                <input type="submit" value="Submit Transaksi">
             </form>
+        </div>
     </body>
     </html>
     <?php 
@@ -56,15 +62,13 @@
                 $this->array,  $this->namaPelanggan, $this->tanggal, $this->barang, $this->totalBayar,$this->metodeBayar
             );
         }
-        public function output_628() {
-            echo "<div class='hasil'>";
+        public function output_628() {            
             echo "<h3>Data Transaksi</h3>";
             echo "<p><strong>Nama Pelanggan:</strong> $this->namaPelanggan</p>";
             echo "<p><strong>Tanggal:</strong> $this->tanggal</p>";
             echo "<p><strong>Barang:</strong> $this->barang</p>";
             echo "<p><strong>Total Bayar:</strong> $this->totalBayar</p>";
             echo "<p><strong>Metode Pembayaran:</strong> $this->metodeBayar</p>";
-            echo "</div>";
     }
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -73,8 +77,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $barang = htmlspecialchars($_POST['barang']);
     $totalBayar = htmlspecialchars($_POST['totalBayar']);
     $metodeBayar = htmlspecialchars($_POST['metodeBayar']);
-
+    
+    echo "<div class='hasil'>";
     $detailTransaksi = new daftarTransaksi_628($namaPelanggan, $tanggal, $barang, $totalBayar, $metodeBayar);
     $detailTransaksi->output_628();
+    echo "</div>";
 }
     ?>
