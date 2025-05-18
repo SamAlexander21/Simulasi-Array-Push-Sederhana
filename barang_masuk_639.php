@@ -14,9 +14,15 @@
             <label for="supplier_639">Supplier  : </label>
             <input type="text" id="supplier_639" name="supplier_639" style="width: 100%;" placeholder="Masukkan Nama Supplier"><br>
             <label for="jumlah_639">Jumlah : </label>
-            <input type="text" id="jumlah_639" name="jumlah_639" style="width: 100%;" placeholder="Masukkan Jumlah"><br>
+            <input type="number" id="jumlah_639" name="jumlah_639" style="width: 100%;" placeholder="Masukkan Jumlah"><br>
             <label for="kondisiBarang_639">Kondisi Barang : </label>
-            <input type="text" id="kondisiBarang_639" name="kondisiBarang_639" style="width: 100%;" placeholder="Masukkan Kondisi Barang"><br>
+            <select id="kondisiBarang_639" name="kondisiBarang_639" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 20px; font-size: 14px; background: #fff;">
+                <option value="" disabled selected>Pilih Kondisi Barang</option>
+                <option value="Baik">Baik</option>
+                <option value="Rusak Ringan">Rusak Ringan</option>
+                <option value="Rusak Berat">Rusak Berat</option>
+                </select>
+            <br>
             <label for="tanggalMasuk_639">Tanggal Masuk : </label>
             <input type="date" id="tanggalMasuk_639" name="tanggalMasuk_639" style="width: 100%;" placeholder="Pilih Tanggal Masuk"><br>
             <input type="submit">
