@@ -7,29 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navbar">
-        <h1>Inventori Gudang</h1>
-        <div class="nav-links">
-            <a href="register_pegawai_642.php">Registrasi Pegawai</a>
-            <a href="barang_masuk_639.php">Barang Masuk</a>
-            <a href="barang_keluar_651.php">Barang Keluar</a>
-            <a href="register_inventori_627.php">Inventori</a>
-            <a href="transaksi_628.php">Transaksi</a>
-        </div>
-    </div>
+    <?php include 'navbar.php'; ?>
     <div class="container">        
     <h2>Register Pegawai</h2>
     <form action="" method="POST">
         <label for="nama">Nama</label>
-        <input type="text" name="nama" id="nama" required>
+        <input type="text" name="nama_642" id="nama_642" required>
         <label for="alamat">Alamat</label>
-        <input type="text" name="alamat" id="alamat" required>
+        <input type="text" name="alamat_642" id="alamat_642" required>
         <label for="no_telp">No. Telepon</label>
-        <input type="text" name="no_telp" id="no_telp" required>
+        <input type="text" name="no_telp_642" id="no_telp_642" required>
         <label for="username">Username</label>
-        <input type="text" name="username" id="username" required>
+        <input type="text" name="username_642" id="username_642" required>
         <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
+        <input type="password" name="password_642" id="password_642" required>
         <input type="submit" value="Register">
     </form>
     </div>
@@ -48,28 +39,30 @@ class daftarPegawai_642 extends pegawai_642 {
         $this->no_telp = $no_telp_642;
         $this->username = $username_642;
         $this->password = password_hash($password_642, PASSWORD_DEFAULT);
-        $this->array = [];
-        array_push(
-            $this->array, $this->nama, $this->alamat, $this->no_telp, $this->username, $this->password
-        );
+
     }
 
     public function output_642() {
-        echo "<h3>Selamat Datang!</h3>";
-        echo "<p><strong>Nama:</strong> $this->nama</p>";
-        echo "<p><strong>Alamat:</strong> $this->alamat</p>";
-        echo "<p><strong>No. Telepon:</strong> $this->no_telp</p>";
-        echo "<p><strong>Username:</strong> $this->username</p>";
-        echo "<p><strong>Password:</strong> $this->password</p>";
+        $array = [
+            'Nama' => $this->nama,
+            'Alamat' => $this->alamat,
+            'No. Telepon' => $this->no_telp,
+            'Username' => $this->username,
+            'Password' => $this->password
+        ];
+
+        echo "<h3>Data Pegawai</h3>";
+        foreach ($array as $key => $value) {
+            echo "<p><strong>$key:</strong> $value</p>";
         }
     }
-
+}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nama = htmlspecialchars($_POST['nama']);
-    $alamat = htmlspecialchars($_POST['alamat']);
-    $no_telp = htmlspecialchars($_POST['no_telp']);
-    $username = htmlspecialchars($_POST['username']);
-    $password = htmlspecialchars($_POST['password']);
+    $nama = htmlspecialchars($_POST['nama_642']);
+    $alamat = htmlspecialchars($_POST['alamat_642']);
+    $no_telp = htmlspecialchars($_POST['no_telp_642']);
+    $username = htmlspecialchars($_POST['username_642']);
+    $password = htmlspecialchars($_POST['password_642']);
 
     echo "<div class='hasil'>";
     $pegawaiBaru642 = new daftarPegawai_642($nama, $alamat, $no_telp, $username, $password);

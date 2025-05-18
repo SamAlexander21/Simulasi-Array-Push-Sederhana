@@ -7,39 +7,30 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="navbar">
-        <h1>Inventori Gudang</h1>
-        <div class="nav-links">
-            <a href="register_pegawai_642.php">Registrasi Pegawai</a>
-            <a href="barang_masuk_639.php">Barang Masuk</a>
-            <a href="barang_keluar_651.php">Barang Keluar</a>
-            <a href="register_inventori_627.php">Inventori</a>
-            <a href="transaksi_628.php">Transaksi</a>
-        </div>
-    </div>
+        <?php include 'navbar.php'; ?>
         <div class="container">
             <h2>Register Transaksi</h2>
             <form action="" method="POST">
                 <label for="nama">Nama Pelanggan</label>
-                <input type="text" name="namaPelanggan" id="nama" required>
+                <input type="text" name="namaPelanggan_628" id="nama_628" required>
                 
                 <label for="barang">Barang</label>
-                <input type="text" name="barang" id="barang" required>
+                <input type="text" name="barang_628" id="barang_628" required>
                 
                 <label for="bayar">Total Harga bayar</label>
-                <input type="text" name="totalBayar" id="bayar" required>
+                <input type="text" name="totalBayar_628" id="bayar_628" required>
                 
                 <label for="metode">Metode Pembayaran</label>
                 <!-- <input type="text" name="metodeBayar" id="metode" required> -->
                 
-                <select name="metodeBayar" id="metode" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 20px; font-size: 14px; background: #fff;">
-                <option value="" disabled selected>Pilih pembayaran</option>    
+                <select name="metodeBayar_628" id="metode_628" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 20px; font-size: 14px; background: #fff;">
+                <option value="" disabled selected>Pilih Pembayaran</option>    
                 <option value="Tunai">Tunai</option>
-                <option value="Kredit">Kredit</option>
+                <option value="Non-Tunai">Non-Tunai</option>
                 </select>
 
                 <label for="tanggal">Tanggal</label>
-                <input type="date" name="tanggal" id="tanggal" required>
+                <input type="date" name="tanggal_628" id="tanggal_628" required>
 
                 <input type="submit" value="Submit Transaksi">
             </form>
@@ -58,30 +49,36 @@
             $this->barang = $barang;
             $this->totalBayar = $totalBayar ;
             $this->metodeBayar = $metodeBayar;
-            $this->array = [];
-            array_push(
-                $this->array,  $this->namaPelanggan, $this->tanggal, $this->barang, $this->totalBayar,$this->metodeBayar
-            );
+            
+            
         }
-        public function output_628() {            
-            echo "<h3>Data Transaksi</h3>";
-            echo "<p><strong>Nama Pelanggan:</strong> $this->namaPelanggan</p>";
-            echo "<p><strong>Tanggal:</strong> $this->tanggal</p>";
-            echo "<p><strong>Barang:</strong> $this->barang</p>";
-            echo "<p><strong>Total Bayar:</strong> $this->totalBayar</p>";
-            echo "<p><strong>Metode Pembayaran:</strong> $this->metodeBayar</p>";
-    }
+        public function output_628() {
+            $array = [
+                'Nama Pelanggan' => $this->namaPelanggan,
+                'Tanggal' => $this->tanggal,
+                'Barang' => $this->barang,
+                'Total Bayar' => $this->totalBayar,
+                'Metode Pembayaran' => $this->metodeBayar
+            ];
+        
+            echo '<h3>Data Transaksi</h3>';
+            foreach ($array as $key => $value) {
+                echo '<p><strong>' . $key . ':</strong> ' . $value . '</p>';
+            }
+        }
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $namaPelanggan = htmlspecialchars($_POST['namaPelanggan']);
-    $tanggal = htmlspecialchars($_POST['tanggal']);
-    $barang = htmlspecialchars($_POST['barang']);
-    $totalBayar = htmlspecialchars($_POST['totalBayar']);
-    $metodeBayar = htmlspecialchars($_POST['metodeBayar']);
+    $namaPelanggan = htmlspecialchars($_POST['namaPelanggan_628']);
+    $tanggal = htmlspecialchars($_POST['tanggal_628']);
+    $barang = htmlspecialchars($_POST['barang_628']);
+    $totalBayar = htmlspecialchars($_POST['totalBayar_628']);
+    $metodeBayar = htmlspecialchars($_POST['metodeBayar_628']);
+    $arrayMenampilkan = [];
     
     echo "<div class='hasil'>";
     $detailTransaksi = new daftarTransaksi_628($namaPelanggan, $tanggal, $barang, $totalBayar, $metodeBayar);
     $detailTransaksi->output_628();
     echo "</div>";
+    
 }
     ?>

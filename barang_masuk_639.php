@@ -5,16 +5,7 @@
         <title>Input Barang</title>
         <link rel="stylesheet" href="style.css">
     <body>
-        <div class="navbar">
-        <h1>Inventori Gudang</h1>
-        <div class="nav-links">
-            <a href="register_pegawai_642.php">Registrasi Pegawai</a>
-            <a href="barang_masuk_639.php">Barang Masuk</a>
-            <a href="barang_keluar_651.php">Barang Keluar</a>
-            <a href="register_inventori_627.php">Inventori</a>
-            <a href="transaksi_628.php">Transaksi</a>
-        </div>
-    </div>
+        <?php include 'navbar.php'; ?>
         <div class="container">
         <h2>Input Barang Masuk</h2>
         <form action="" method="POST">
@@ -57,14 +48,17 @@
             );
         }
         public function funtion_639() {
-            echo "<p><strong>Nama Barang:</strong> {$this->namaBarang}</p>";
-            echo "<p><strong>Supplier:</strong> {$this->supplier}</p>";
-            echo "<p><strong>Jumlah:</strong> {$this->jumlah}</p>";
-            echo "<p><strong>Kondisi Barang:</strong> {$this->kondisiBarang}</p>";
-            echo "<p><strong>Tanggal Masuk:</strong> {$this->tanggalMasuk}</p>";
-            // foreach ($this->array as $key => $value) {
-            //     echo "<p><strong>Array</strong>[{$key}]: $value";
-            // }
+            $array = [
+                'Nama Barang' => $this->namaBarang,
+                'Supplier' => $this->supplier,
+                'Tanggal Masuk' => $this->tanggalMasuk,
+                'Jumlah' => $this->jumlah,
+                'Kondisi Barang' => $this->kondisiBarang
+            ];
+            echo "<h3>Data Barang Masuk</h3>";
+            foreach ($array as $key => $value) {
+                echo "<p><strong>{$key}:</strong> {$value}</p>";
+            }
         }
     }
 
