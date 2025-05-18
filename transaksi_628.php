@@ -33,8 +33,9 @@
                 <!-- <input type="text" name="metodeBayar" id="metode" required> -->
                 
                 <select name="metodeBayar" id="metode" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 20px; font-size: 14px; background: #fff;">
-                    <option value="Tunai">Tunai</option>
-                    <option value="Kredit">Kredit</option>
+                <option value="" disabled selected>Pilih pembayaran</option>    
+                <option value="Tunai">Tunai</option>
+                <option value="Kredit">Kredit</option>
                 </select>
 
                 <label for="tanggal">Tanggal</label>
