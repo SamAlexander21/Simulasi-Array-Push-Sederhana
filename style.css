@@ -39,6 +39,31 @@ body {
     padding: 0 0px;
 }
 
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    background: #840000;
+    padding: 0.5px 0;
+}
+
+.dropbtn {
+    background: none;
+    color: #fff;
+    padding: 4px 12px;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    margin: 0 4px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dropbtn:hover {
+    background: rgba(255,255,255,0.1);
+}
 
 .container {
     max-width: 500px;

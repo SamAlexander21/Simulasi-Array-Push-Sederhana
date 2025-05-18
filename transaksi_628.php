@@ -12,16 +12,16 @@
             <h2>Register Transaksi</h2>
             <form action="" method="POST">
                 <label for="nama">Nama Pelanggan</label>
-                <input type="text" name="namaPelanggan_628" id="nama_628" required>
+                <input type="text" name="namaPelanggan_628" id="nama_628" >
                 
                 <label for="barang">Barang</label>
-                <input type="text" name="barang_628" id="barang_628" required>
+                <input type="text" name="barang_628" id="barang_628" >
                 
                 <label for="bayar">Total Harga bayar</label>
-                <input type="text" name="totalBayar_628" id="bayar_628" required>
+                <input type="text" name="totalBayar_628" id="bayar_628" >
                 
                 <label for="metode">Metode Pembayaran</label>
-                <!-- <input type="text" name="metodeBayar" id="metode" required> -->
+                <!-- <input type="text" name="metodeBayar" id="metode" > -->
                 
                 <select name="metodeBayar_628" id="metode_628" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 20px; font-size: 14px; background: #fff;">
                 <option value="" disabled selected>Pilih Pembayaran</option>    
@@ -30,7 +30,7 @@
                 </select>
 
                 <label for="tanggal">Tanggal</label>
-                <input type="date" name="tanggal_628" id="tanggal_628" required>
+                <input type="date" name="tanggal_628" id="tanggal_628" >
 
                 <input type="submit" value="Submit Transaksi">
             </form>

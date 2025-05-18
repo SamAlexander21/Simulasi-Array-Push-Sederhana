@@ -25,7 +25,7 @@
             </select>
             <label for="noTelp_627">No. Telepon :</label>
             <input type="text" id="noTelp_627" name="noTelp_627" placeholder="Masukkan No. Telp" style="width: 100%;"><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Register">
         </form>
         </div>
     </body>
