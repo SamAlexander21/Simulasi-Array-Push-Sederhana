@@ -10,15 +10,15 @@
         <h2>Input Barang Masuk</h2>
         <form action="" method="POST">
             <label for="namaBarang_639">Nama Barang : </label>
-            <input type="text" id="namaBarang_639" name="namaBarang_639" style="width: 100%;"><br>
+            <input type="text" id="namaBarang_639" name="namaBarang_639" placeholder="Masukkan Nama Barang" style="width: 100%;" placeholder="Masukkan Nama Barang"><br>
             <label for="supplier_639">Supplier  : </label>
-            <input type="text" id="supplier_639" name="supplier_639" style="width: 100%;"><br>
+            <input type="text" id="supplier_639" name="supplier_639" style="width: 100%;" placeholder="Masukkan Nama Supplier"><br>
             <label for="jumlah_639">Jumlah : </label>
-            <input type="text" id="jumlah_639" name="jumlah_639" style="width: 100%;"><br>
+            <input type="text" id="jumlah_639" name="jumlah_639" style="width: 100%;" placeholder="Masukkan Jumlah"><br>
             <label for="kondisiBarang_639">Kondisi Barang : </label>
-            <input type="text" id="kondisiBarang_639" name="kondisiBarang_639" style="width: 100%;"><br>
+            <input type="text" id="kondisiBarang_639" name="kondisiBarang_639" style="width: 100%;" placeholder="Masukkan Kondisi Barang"><br>
             <label for="tanggalMasuk_639">Tanggal Masuk : </label>
-            <input type="date" id="tanggalMasuk_639" name="tanggalMasuk_639" style="width: 100%;"><br>
+            <input type="date" id="tanggalMasuk_639" name="tanggalMasuk_639" style="width: 100%;" placeholder="Pilih Tanggal Masuk"><br>
             <input type="submit">
         </form>
         </div>

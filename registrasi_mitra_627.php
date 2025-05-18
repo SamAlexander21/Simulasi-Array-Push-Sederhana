@@ -10,21 +10,21 @@
         <h2>Daftar Mitra</h2>
         <form action="" method="POST">
             <label for="ktp_627">KTP :</label>
-            <input type="text" id="ktp_627" name="ktp_627" style="width: 100%;"><br>
+            <input type="text" id="ktp_627" name="ktp_627" placeholder="Masukkan No. KTP" style="width: 100%;"><br>
             <label for="nama_627">Nama :</label>
-            <input type="text" id="nama_627" name="nama_627" style="width: 100%;"><br>
+            <input type="text" id="nama_627" name="nama_627" placeholder="Masukkan Nama" style="width: 100%;"><br>
             <label for="domisili_627">Domisili :</label>
-            <input type="text" id="domisili_627" name="domisili_627" style="width: 100%;"><br>
+            <input type="text" id="domisili_627" name="domisili_627" placeholder="Masukkan Kota Asal" style="width: 100%;"><br>
             <label for="skalaUsaha_627">Skala Usaha :</label>
             <select id="skalaUsaha_627" name="skalaUsaha_627" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 20px; font-size: 14px; background: #fff;">
-                <option value="" disabled selected>Pilih Skala Usaha</option>
+                <option class="default" value="" disabled selected>Pilih Skala Usaha</option>
                 <option value="Mikro">Mikro</option>
                 <option value="Kecil">Kecil</option>
                 <option value="Menengah">Menengah</option>
                 <option value="Besar">Besar</option>
             </select>
             <label for="noTelp_627">No. Telepon :</label>
-            <input type="text" id="noTelp_627" name="noTelp_627" style="width: 100%;"><br>
+            <input type="text" id="noTelp_627" name="noTelp_627" placeholder="Masukkan No. Telp" style="width: 100%;"><br>
             <input type="submit" value="Submit">
         </form>
         </div>

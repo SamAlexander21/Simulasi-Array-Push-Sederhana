@@ -14,17 +14,17 @@
         <h2>Barang Keluar</h2>
         <form action="" method="POST">
             <label for="id_651">ID Barang : </label>
-            <input type="text" id="id_651" name="id_651"><br>
+            <input type="text" id="id_651" name="id_651" placeholder="Masukkan ID Barang"><br>
             <label for="nama_651">Nama Barang : </label>
-            <input type="text" id="nama_651" name="nama_651"><br>
+            <input type="text" id="nama_651" name="nama_651" placeholder="Masukkan Nama Barang"><br>
             <label for="deskripsi_651">Deskripsi : </label>
-            <input type="text" id="deskripsi_651" name="deskripsi_651"><br>
+            <input type="text" id="deskripsi_651" name="deskripsi_651" placeholder="Masukkan Deskripsi"><br>
             <label for="kategori_651">Kategori : </label>
-            <input type="text" id="kategori_651" name="kategori_651"><br>
+            <input type="text" id="kategori_651" name="kategori_651" placeholder="Masukkan Kategori"><br>
             <label for="keluar_651">Jumlah Keluar  : </label>
-            <input type="text" id="keluar_651" name="keluar_651"><br>
+            <input type="text" id="keluar_651" name="keluar_651" placeholder="Masukkan Jumlah Keluar"><br>
             <label for="tanggal_651">Tanggal Keluar : </label>
-            <input type="date" id="tanggal_651" name="tanggal_651"><br>
+            <input type="date" id="tanggal_651" name="tanggal_651" placeholder="Pilih Tanggal Keluar"><br>
             <input type="submit" value="Submit">
         </form>
     </div>
