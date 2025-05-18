@@ -39,6 +39,7 @@ body {
     padding: 0 0px;
 }
 
+
 .container {
     max-width: 500px;
     margin: 60px auto;
@@ -87,6 +88,10 @@ input[type="password"] {
     border-radius: 6px;
     margin-bottom: 20px;
     font-size: 14px;
+}
+
+input::placeholder {
+    color: #aaa;
 }
 
 input[type="submit"] {
