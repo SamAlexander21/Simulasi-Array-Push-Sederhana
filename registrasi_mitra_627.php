@@ -51,26 +51,30 @@
             
         }
         public function out_627() {
-            $array = [
-                'KTP' => $this->ktp,
-                'Nama' => $this->nama,
-                'Domisili' => $this->domisili,
-                'Skala Usaha' => $this->skalaUsaha,
-                'No Telepon' => $this->notelp
+            $label = [
+                'KTP',
+                'Nama',
+                'Domisili',
+                'Skala Usaha',
+                'No Telepon'
             ];
+            $array = [];
+            array_push(
+                $array, $this->ktp,$this->nama,$this->domisili,$this->skalaUsaha,$this->notelp
+            );
             echo "<h3>Data Mitra</h3>";
-            foreach ($array as $key => $value) {
-                echo "<p><strong>{$key}:</strong> {$value}</p>";
+            foreach ($label as $index => $labelInput) {
+                echo "<p><strong>{$labelInput}:</strong> {$array[$index]}</p>";
             }
         }
     }
 
     if ($_POST) {
-        $ktp = $_POST['ktp_627'];
-        $nama = $_POST['nama_627'];
-        $domisili = $_POST['domisili_627'];
-        $skalaUsaha = $_POST['skalaUsaha_627'];
-        $notelp = $_POST['noTelp_627'];
+        $ktp = htmlspecialchars($_POST['ktp_627']);
+        $nama = htmlspecialchars($_POST['nama_627']);
+        $domisili = htmlspecialchars($_POST['domisili_627']);
+        $skalaUsaha = htmlspecialchars($_POST['skalaUsaha_627']);
+        $notelp = htmlspecialchars($_POST['noTelp_627']);
         
         echo "<div class='hasil'>";
         $out_627 = new submitInven_627($ktp,$nama,$domisili,$skalaUsaha, $notelp);

@@ -53,17 +53,20 @@
             
         }
         public function output_628() {
-            $array = [
-                'Nama Pelanggan' => $this->namaPelanggan,
-                'Tanggal' => $this->tanggal,
-                'Barang' => $this->barang,
-                'Total Bayar' => $this->totalBayar,
-                'Metode Pembayaran' => $this->metodeBayar
+            $label = [
+                'Nama Pelanggan',
+                'Barang',
+                'Total Bayar',
+                'Metode Pembayaran',
+                'Tanggal'
             ];
-        
-            echo '<h3>Data Transaksi</h3>';
-            foreach ($array as $key => $value) {
-                echo '<p><strong>' . $key . ':</strong> ' . $value . '</p>';
+            $array = [];
+            array_push(
+                $array, $this->namaPelanggan, $this->barang, $this->totalBayar, $this->metodeBayar, $this->tanggal
+            );
+            echo "<h3>Data Mitra</h3>";
+            foreach ($label as $index => $labelInput) {
+                echo "<p><strong>{$labelInput}:</strong> {$array[$index]}</p>";
             }
         }
 }
@@ -73,7 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $barang = htmlspecialchars($_POST['barang_628']);
     $totalBayar = htmlspecialchars($_POST['totalBayar_628']);
     $metodeBayar = htmlspecialchars($_POST['metodeBayar_628']);
-    $arrayMenampilkan = [];
     
     echo "<div class='hasil'>";
     $detailTransaksi = new daftarTransaksi_628($namaPelanggan, $tanggal, $barang, $totalBayar, $metodeBayar);

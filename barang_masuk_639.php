@@ -54,26 +54,30 @@
             );
         }
         public function funtion_639() {
-            $array = [
-                'Nama Barang' => $this->namaBarang,
-                'Supplier' => $this->supplier,
-                'Tanggal Masuk' => $this->tanggalMasuk,
-                'Jumlah' => $this->jumlah,
-                'Kondisi Barang' => $this->kondisiBarang
+            $label = [
+                'Nama Barang',
+                'Supplier',
+                'Jumlah',
+                'Kondisi Barang',
+                'Tanggal Masuk'
             ];
-            echo "<h3>Data Barang Masuk</h3>";
-            foreach ($array as $key => $value) {
-                echo "<p><strong>{$key}:</strong> {$value}</p>";
+            $array = [];
+            array_push(
+                $array, $this->namaBarang,$this->supplier,$this->jumlah,$this->kondisiBarang,$this->tanggalMasuk
+            );
+            echo "<h3>Data Mitra</h3>";
+            foreach ($label as $index => $labelInput) {
+                echo "<p><strong>{$labelInput}:</strong> {$array[$index]}</p>";
             }
         }
     }
 
     if ($_POST) {
-        $namaBarang = $_POST['namaBarang_639'];
-        $supplier = $_POST['supplier_639'];
-        $tanggalMasuk = $_POST['tanggalMasuk_639'];
-        $jumlah = $_POST['jumlah_639'];
-        $kondisiBarang = $_POST['kondisiBarang_639'];
+        $namaBarang = htmlspecialchars($_POST['namaBarang_639']);
+        $supplier = htmlspecialchars($_POST['supplier_639']);
+        $tanggalMasuk = htmlspecialchars($_POST['tanggalMasuk_639']);
+        $jumlah =  htmlspecialchars($_POST['jumlah_639']);
+        $kondisiBarang = htmlspecialchars($_POST['kondisiBarang_639']);
         
         echo "<div class='hasil'>";
         $out_639 = new stock_639($namaBarang,$supplier,$tanggalMasuk,$jumlah, $kondisiBarang);

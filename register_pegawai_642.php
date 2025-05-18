@@ -43,17 +43,20 @@ class daftarPegawai_642 extends pegawai_642 {
     }
 
     public function output_642() {
-        $array = [
-            'Nama' => $this->nama,
-            'Alamat' => $this->alamat,
-            'No. Telepon' => $this->no_telp,
-            'Username' => $this->username,
-            'Password' => $this->password
+        $label = [
+            'Nama',
+            'Alamat',
+            'No Telepon',
+            'Username',
+            'Password'
         ];
-
-        echo "<h3>Data Pegawai</h3>";
-        foreach ($array as $key => $value) {
-            echo "<p><strong>$key:</strong> $value</p>";
+        $array = [];
+        array_push(
+            $array, $this->nama, $this->alamat, $this->no_telp, $this->username, $this->password
+        );
+        echo "<h3>Data Mitra</h3>";
+        foreach ($label as $index => $labelInput) {
+            echo "<p><strong>{$labelInput}:</strong> {$array[$index]}</p>";
         }
     }
 }

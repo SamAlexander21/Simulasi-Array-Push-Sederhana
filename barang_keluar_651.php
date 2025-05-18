@@ -58,28 +58,32 @@
         }
 
         public function funtion_651() {
-            $array = [
-                'Id barang' => $this->idBarang,
-                'Nama Barang' => $this->namaBarang,
-                'Deskripsi Barang' => $this->deskripsiBarang,
-                'Kategori' => $this->kategoriBarang,
-                'Tanggal Keluar' => $this->tanggalKeluar,
-                'Jumlah Keluar' => $this->barangKeluar
+            $label = [
+                'ID Barang',
+                'Nama Barang',
+                'Deskripsi',
+                'Kategori',
+                'Jumlah Keluar',
+                'Tanggal Keluar'
             ];
-            echo "<h3>Data Barang Masuk</h3>";
-            foreach ($array as $key => $value) {
-                echo "<p><strong>{$key}:</strong> {$value}</p>";
+            $array = [];
+            array_push(
+                $array, $this->idBarang,$this->namaBarang,$this->deskripsiBarang,$this->kategoriBarang,$this->barangKeluar,$this->tanggalKeluar
+            );
+            echo "<h3>Data Mitra</h3>";
+            foreach ($label as $index => $labelInput) {
+                echo "<p><strong>{$labelInput}:</strong> {$array[$index]}</p>";
             }
         }
     }
 
     if ($_POST) {
-        $idBarang = $_POST['id_651'];
-        $namaBarang = $_POST['nama_651'];
-        $deskripsiBarang = $_POST['deskripsi_651'];
-        $kategoriBarang = $_POST['kategori_651'];
-        $tanggalKeluar = $_POST['tanggal_651'];
-        $barangKeluar = $_POST['keluar_651'];
+        $idBarang = htmlspecialchars($_POST['id_651']);
+        $namaBarang = htmlspecialchars($_POST['nama_651']);
+        $deskripsiBarang = htmlspecialchars($_POST['deskripsi_651']);
+        $kategoriBarang = htmlspecialchars($_POST['kategori_651']);
+        $tanggalKeluar = htmlspecialchars($_POST['tanggal_651']);
+        $barangKeluar = htmlspecialchars($_POST['keluar_651']);
         
         echo "<div class='hasil'>";
         $out_651 = new barang_keluar_651($idBarang,$namaBarang,$deskripsiBarang,$kategoriBarang,$tanggalKeluar,$barangKeluar);
