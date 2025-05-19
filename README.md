@@ -6,6 +6,6 @@ Proyek ini adalah contoh sederhana penggunaan fungsi array_push() di PHP untuk m
 • Menampilkan daftar nama yang sudah dimasukkan dengan foreach. <br>
 
 🛠️ Teknologi:
-• PHP native
-• HTML (form dasar)
-• Css vanilla
+• PHP native <br>
+• HTML (form dasar) <br>
+• Css vanilla <br>
