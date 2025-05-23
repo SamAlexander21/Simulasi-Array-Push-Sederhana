@@ -10,7 +10,7 @@
     <?php include 'navbar.php'; ?>
     <div class="container">        
     <h2>Register Pegawai</h2>
-    <form action="" method="POST">
+    <form action="register_pegawai_642" method="POST">
         <label for="nama">Nama</label>
         <input type="text" name="nama_642" id="nama_642" placeholder="Masukkan Nama" >
         <label for="alamat">Alamat</label>
@@ -24,6 +24,7 @@
         <input type="submit" value="Register">
     </form>
     </div>
+    <?php include 'footer.php'; ?>
 </body>
 </html>
 

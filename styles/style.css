@@ -162,6 +162,20 @@ input[type="submit"]:hover {
     overflow-x: hidden;
 }
 
+.footer {
+      display: block;
+      background-color: #e85454;
+      color: #21c536;
+      text-align: center;
+      padding: 1rem;
+      font-size: 14px;
+    }
+
+    /* footer p {
+      color: #00bfff;
+      text-decoration: none;
+    } */
+
 @media (max-width: 600px) {
     .container {
         padding: 15px;
