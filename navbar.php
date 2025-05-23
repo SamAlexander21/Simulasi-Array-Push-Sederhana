@@ -10,12 +10,11 @@
         <div class="nav-links">            
             <?php
                 if (isset($_SESSION['username'], $_SESSION['password'])) {
-                    echo "Halo, " . $_SESSION['username'] . "!";
+                    echo "<a href='userDash.php'>Halo, " . $_SESSION['username'] . "!</a>";
+                    echo "<a href='".$_SESSION['username'].".php'>"."Dashboard</a>";
                     echo "<a href='logout.php'>Logout</a>";
                 } else if ($_SERVER['PHP_SELF']) {
                     echo " ";
-                } else {
-                    echo "<a href='index.php'>Login</a>";
                 }
             ?>
         </div>
@@ -23,7 +22,7 @@
     <div class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">📞 Hubungi CS</a>
         <a href="javascript:void(0)" class="dropbtn">🛠️ Report Masalah!</a>
-        </div>
+    </div>
 </body>
 </html>
 
