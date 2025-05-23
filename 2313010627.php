@@ -52,6 +52,7 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Daftar Mitra</title>
         <link rel="stylesheet" href="style.css">
+    </head>
     <body>
         <?php include 'navbar.php'; ?>
         <div class="container">
@@ -92,3 +93,4 @@ session_start();
         $mitra->out_627();
         echo "</div>";
     }
+?>
