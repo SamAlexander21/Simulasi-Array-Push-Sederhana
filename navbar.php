@@ -13,7 +13,7 @@
             <a href="barang_masuk_639.php">Barang Masuk</a>
             <a href="barang_keluar_651.php">Barang Keluar</a>
             <a href="registrasi_mitra_627.php">Inventori</a>
-            <a href="transaksi_628.php">Transaksi</a>
+            <a href="transaksi_628.php"style="padding-right: 15px;">Transaksi</a>
         </div>
     </div>
     <div class="dropdown">
