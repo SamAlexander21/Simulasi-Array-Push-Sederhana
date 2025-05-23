@@ -8,7 +8,7 @@
         <?php include 'navbar.php'; ?>
         <div class="container">
         <h2>Daftar Mitra</h2>
-        <form action="" method="POST">
+        <form action="registrasi_mitra_627" method="POST">
             <label for="ktp_627">KTP :</label>
             <input type="text" id="ktp_627" name="ktp_627" placeholder="Masukkan No. KTP" style="width: 100%;"><br>
             <label for="nama_627">Nama :</label>
@@ -28,6 +28,7 @@
             <input type="submit" value="Register">
         </form>
         </div>
+        <?php include 'footer.php'; ?>
     </body>
 </html>
 

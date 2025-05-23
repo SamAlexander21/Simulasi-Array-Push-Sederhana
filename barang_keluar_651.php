@@ -12,7 +12,7 @@
     <?php include 'navbar.php'; ?>
         <div class="container">     
         <h2>Barang Keluar</h2>
-        <form action="" method="POST">
+        <form action="barang_keluar_651" method="POST">
             <label for="id_651">ID Barang : </label>
             <input type="number" id="id_651" name="id_651" placeholder="Masukkan ID Barang"><br>
             <label for="nama_651">Nama Barang : </label>
@@ -29,6 +29,7 @@
             <input type="submit" value="Submit">
         </form>
     </div>
+    <?php include 'footer.php'; ?>
     </body>
 </html>
 

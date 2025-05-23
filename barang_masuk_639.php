@@ -8,7 +8,7 @@
         <?php include 'navbar.php'; ?>
         <div class="container">
         <h2>Input Barang Masuk</h2>
-        <form action="" method="POST">
+        <form action="barang_masuk_639" method="POST">
             <label for="namaBarang_639">Nama Barang : </label>
             <input type="text" id="namaBarang_639" name="namaBarang_639" placeholder="Masukkan Nama Barang" style="width: 100%;" placeholder="Masukkan Nama Barang"><br>
             <label for="supplier_639">Supplier  : </label>
@@ -28,6 +28,7 @@
             <input type="submit">
         </form>
         </div>
+        <?php include 'footer.php'; ?>
     </body>
 </html>
 

@@ -10,7 +10,7 @@
         <?php include 'navbar.php'; ?>
         <div class="container">
             <h2>Register Transaksi</h2>
-            <form action="" method="POST">
+            <form action="transaksi_628" method="POST">
                 <label for="nama">Nama Pelanggan</label>
                 <input type="text" name="namaPelanggan_628" id="nama_628" >
                 
@@ -35,6 +35,7 @@
                 <input type="submit" value="Submit Transaksi">
             </form>
         </div>
+        <?php include 'footer.php'; ?>
     </body>
     </html>
     <?php 
