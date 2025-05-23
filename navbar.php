@@ -16,7 +16,7 @@
                 if (isset($_SESSION['username'], $_SESSION['password'])) {
                     echo "Halo, " . $_SESSION['username'] . "!";
                     echo "<a href='logout.php'>Logout</a>";
-                } else if ($_SERVER['PHP_SELF'] == '/Tgs-Kelompok-Pak-Robi/api/index.php') {
+                } else if ($_SERVER['PHP_SELF']) {
                     echo " ";
                 } else {
                     echo "<a href='index.php'>Login</a>";
