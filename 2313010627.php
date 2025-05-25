@@ -9,7 +9,7 @@ session_start();
         session_destroy();
         exit();
     } else {
-        class inven_627 {
+        class mitra_627 {
             protected $ktp;
             protected $nama;
             protected $domisili;
@@ -17,7 +17,7 @@ session_start();
             protected $notelp;
             protected $array;
         }
-        class submitInven_627 extends inven_627 {
+        class submitMitra_627 extends mitra_627 {
             public function __construct($ktp_627,$nama_627,$domisili_627,$skalaUsaha_627,$notelp_627) {
                 $this->ktp = $ktp_627;
                 $this->nama = $nama_627;
@@ -89,7 +89,7 @@ session_start();
         $noTelp_627 = $_POST['noTelp_627'];
 
         echo "<div class='hasil'>";
-        $mitra = new submitInven_627($ktp_627, $nama_627, $domisili_627, $skalaUsaha_627, $noTelp_627);
+        $mitra = new submitMitra_627($ktp_627, $nama_627, $domisili_627, $skalaUsaha_627, $noTelp_627);
         $mitra->out_627();
         echo "</div>";
     }
