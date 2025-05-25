@@ -17,7 +17,7 @@ session_start();
         public function cekLogin() {
             $username = array('2313010627', '2313010628', '2313010639', '2313010642', '2313010651');
             $password = array('2313010627', '2313010628', '2313010639', '2313010642', '2313010651');
-            if ( in_array($this->username, $username) && in_array($this->password, $password)) {
+            if (in_array($this->username, $username) && in_array($this->password, $password)) {
                 if (!isset($_SESSION['username']) && ($_POST['username'] == $_POST['password'])) {
                     switch ($_POST['username']) {
                         case '2313010627':
@@ -44,9 +44,11 @@ session_start();
                             $_SESSION ['password'] = password_hash($_POST['password'], CRYPT_SHA256);
                             header('Location: 2313010651.php');
                     }
+                } else if (( !in_array($this->username, $username) || !in_array($this->password, $password)) || ($_POST['username'] != $_POST['password'])) {
+                    session_unset();
+                    session_destroy();
+                    echo "<h3 style='text-align: center; color: red;'>Username atau Password Salah</h3>";
                 }
-            } else if ( !in_array($this->username, $username) || !in_array($this->password, $password)) {
-                echo "<h3 style='text-align: center; color: red;'>Username atau Password Salah</h3>";
             }
         }
     }
