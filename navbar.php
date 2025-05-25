@@ -13,6 +13,8 @@
                     echo "<a href='userDash.php'>Halo, " . $_SESSION['username'] . "!</a>";
                     echo "<a href='".$_SESSION['username'].".php'>"."Dashboard</a>";
                     echo "<a href='logout.php'>Logout</a>";
+                } else if (basename($_SERVER['PHP_SELF']) != 'index.php') {
+                    echo "<a href='index.php'>Login</a>";
                 } else if ($_SERVER['PHP_SELF']) {
                     echo " ";
                 }
