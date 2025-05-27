@@ -17,7 +17,7 @@ session_start();
         public function cekLogin() {
             $username = array('2313010627', '2313010628', '2313010639', '2313010642', '2313010651');
             $password = array('2313010627', '2313010628', '2313010639', '2313010642', '2313010651');
-            $salahPass = "<h3 style='text-align: center; color: red;'>Username atau Password Salah</h3>";
+            $salahPass = "<h4 class='blink'>Username atau Password Salah!!!</h4>";
             if (in_array($this->username, $username) && in_array($this->password, $password)) {
                 if (!isset($_SESSION['username']) && ($_POST['username'] == $_POST['password'])) {
                     switch ($_POST['username']) {
@@ -67,7 +67,8 @@ session_start();
 </head>
 <body></body>
 <?php include 'navbar.php'; ?>
-    <div class="container">
+    <div class="form-login">
+        <h2>LOGIN</h2>
         <?php 
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $username = $_POST['username'];
@@ -78,9 +79,9 @@ session_start();
         ?>
         <form action="" method="post">
         <label for="username">Username :</label>
-        <input type="text" name="username" id="username" required>
+        <input type="text" name="username" id="username" placeholder="Input Username" required>
         <label for="password">Password :</label>
-        <input type="password" name="password" id="password" required>
+        <input type="password" name="password" id="password" placeholder="Input Password" required>
         <input type="submit" value="Login">
     </div>
 </form>
