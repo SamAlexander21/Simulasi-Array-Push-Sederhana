@@ -40,10 +40,12 @@ session_start();
                             $_SESSION ['username'] = $_POST['username'];
                             $_SESSION ['password'] = password_hash($_POST['password'], CRYPT_SHA256);
                             header('Location: 2313010642.php');
+                            break;
                         case '2313010651':
                             $_SESSION ['username'] = $_POST['username'];
                             $_SESSION ['password'] = password_hash($_POST['password'], CRYPT_SHA256);
                             header('Location: 2313010651.php');
+                            break;
                     }
                 } else if ( !in_array($this->username, $username) || !in_array($this->password, $password) || ($_POST['username'] != $_POST['password'])) {
                     echo $salahPass;
