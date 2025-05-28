@@ -4,22 +4,32 @@
 </head>
 <body>
     <div class="navbar">
+        <?php
+            if (isset($_SESSION['username'], $_SESSION['password'])) {
+                echo "<div class='user'>";
+                echo "<img class='pp' src='assets/".$_SESSION['username'].".png' alt='foto wajah'>";
+                echo "<a href='userDash.php'>" . $_SESSION['username'] . "</a>"; 
+                echo "</div>";
+            } else if ($_SERVER['PHP_SELF']) {
+                echo " ";
+            }
+        ?>
         <div class="nav-logo">
             <a href="index.php">Inventori Toko</a>
         </div>
-        <div class="nav-links">            
-            <?php
-                if (isset($_SESSION['username'], $_SESSION['password'])) {
-                    echo "<a href='userDash.php'>Halo, " . $_SESSION['username'] . "!</a>";
-                    echo "<a href='".$_SESSION['username'].".php'>"."Dashboard</a>";
-                    echo "<a href='logout.php'>Logout</a>";
-                } else if (basename($_SERVER['PHP_SELF']) != 'index.php') {
-                    echo "<a href='index.php'>Login</a>";
-                } else if ($_SERVER['PHP_SELF']) {
-                    echo " ";
-                }
+        <?php
+            if (isset($_SESSION['username'], $_SESSION['password'])) {
+                echo "<div class='nav-links'>";
+                echo "<a href='".$_SESSION['username'].".php'>"."Dashboard</a>";
+                echo "<a href='logout.php'>Logout</a>";
+                echo "</div>";
+            } else if (basename($_SERVER['PHP_SELF']) != 'index.php') {
+                echo "<a href='index.php'>Login</a>";
+            } else if ($_SERVER['PHP_SELF']) {
+                echo " ";
+            }
+
             ?>
-        </div>
     </div>
     <div class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">📞 Hubungi CS</a>
@@ -27,9 +37,3 @@
     </div>
 </body>
 </html>
-
-<!-- <a href='register_pegawai_642.php'>Registrasi Pegawai</a>
-<a href='barang_masuk_639.php'>Barang Masuk</a>
-<a href='barang_keluar_651.php'>Barang Keluar</a>
-<a href='2313010627.php'>Inventori</a>
-<a href='2313010628.php'>Transaksi</a> -->

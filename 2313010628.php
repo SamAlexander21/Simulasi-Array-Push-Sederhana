@@ -57,18 +57,18 @@ session_start();
         <div class="container">
             <h2>Register Transaksi</h2>
             <form action="" method="POST">
-                <label for="nama">Nama Pelanggan</label>
-                <input type="text" name="namaPelanggan_628" id="nama_628" >
-                
-                <label for="barang">Barang</label>
-                <input type="text" name="barang_628" id="barang_628" >
-                
-                <label for="bayar">Total Harga bayar</label>
-                <input type="text" name="totalBayar_628" id="bayar_628" >
+            <label for="nama">Nama Pelanggan</label>
+            <input type="text" name="namaPelanggan_628" id="nama_628" placeholder="Masukkan nama pelanggan" >
+
+            <label for="barang">Barang</label>
+            <input type="text" name="barang_628" id="barang_628" placeholder="Masukkan nama barang" >
+
+            <label for="bayar">Total Harga bayar</label>
+            <input type="text" name="totalBayar_628" id="bayar_628" placeholder="Masukkan total bayar" >
                 
                 <label for="metode">Metode Pembayaran</label>
                 <select name="metodeBayar_628" id="metode_628" required>
-                    <option value="" disabled selected>--Pilih Pembayaran--</option>    
+                    <option value="" disabled selected>Pilih Pembayaran</option>    
                     <option value="Tunai">Tunai</option>
                     <option value="Non-Tunai">Non-Tunai</option>
                 </select>

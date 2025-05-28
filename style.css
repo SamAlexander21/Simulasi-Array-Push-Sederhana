@@ -10,7 +10,7 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #d60000;
     padding: 15px;
     color: white;
@@ -23,10 +23,14 @@ body {
 }
 
 .nav-logo {
-    display: flex;
+    display: block;
     align-items: center;
     font-size: 32px;
     font-weight: bold;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    /* padding-right: 20px; */
 }
 
 .nav-links a {
@@ -158,7 +162,7 @@ body {
 h2 {
     text-align: center;
     color: #d60000;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 h4 {
@@ -258,6 +262,35 @@ select {
     overflow-wrap: break-word;
     overflow-x: hidden;
 }
+
+img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.user {
+    display: flex;
+    max-width: 140px;
+}
+
+.user a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    padding-left: 15px;
+}
+
+.pp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #840000;
+    display: block;
+    margin: 0px auto;
+} 
 
 @keyframes blinker { 
   50% { opacity: 0; } 
