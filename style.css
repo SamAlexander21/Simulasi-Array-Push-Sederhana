@@ -20,6 +20,8 @@ body {
 .nav-links {
     display: flex;
     gap: 15px;
+    justify-content: end;
+    min-width: 140px;
 }
 
 .nav-logo {
@@ -272,6 +274,7 @@ img {
 
 .user {
     display: flex;
+    min-width: 140px;
     max-width: 140px;
 }
 
