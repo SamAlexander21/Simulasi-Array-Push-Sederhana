@@ -15,7 +15,7 @@
             } else if ($_SERVER['PHP_SELF']) {
                 echo "<div class='user'>";
                 echo "<img class='pp' src='' alt='foto wajah'>";
-                echo "<a href='userDash.php'>Error</a>";
+                echo "<a href='#'>Error</a>";
                 echo "</div>";
             } 
         ?>
